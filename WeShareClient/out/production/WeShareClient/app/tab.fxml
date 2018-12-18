@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.VBox?>
+
+<Tab fx:id="tab" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.tabController">
+   <content>
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="176.0" prefWidth="403.0" vbarPolicy="ALWAYS">
+         <contextMenu>
+            <ContextMenu maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+         <content>
+            <VBox fx:id="msgSpace" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefWidth="222.0" snapToPixel="false">
+               <padding>
+                  <Insets left="15.0" />
+               </padding></VBox>
+         </content>
+      </ScrollPane>
+   </content>
+</Tab>

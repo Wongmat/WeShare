@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane prefHeight="400.0" prefWidth="318.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="app.browserController">
+   <content>
+      <VBox fx:id="browserBox" maxHeight="1.7976931348623157E308" prefHeight="398.0" prefWidth="316.0" />
+   </content>
+</ScrollPane>

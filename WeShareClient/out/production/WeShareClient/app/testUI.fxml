@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="450.0" prefWidth="446.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="inputField" prefHeight="38.0" prefWidth="335.0" />
+            <Button mnemonicParsing="false" onMouseClicked="#onPostButtonClicked" prefHeight="38.0" prefWidth="50.0" text="Post" />
+            <Button mnemonicParsing="false" onMouseClicked="#onMenuButtonClicked" prefHeight="38.0" prefWidth="59.0" text="Menu" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="scrollPane" prefHeight="330.0" prefWidth="446.0">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+               <content>
+                  <VBox fx:id="vbox" maxHeight="1.7976931348623157E308" prefHeight="410.0" prefWidth="444.0" snapToPixel="false" />
+               </content>
+            </ScrollPane>
+            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="139.0" StackPane.alignment="BOTTOM_RIGHT">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#onImageButtonClicked" prefHeight="49.0" prefWidth="129.0" text="Image" />
+                  <Button mnemonicParsing="false" prefHeight="86.0" prefWidth="123.0" text="Audio" GridPane.columnIndex="1" onMouseClicked="#onAudioButtonClicked"/>
+                  <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="117.0" text="Location" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="112.0" text="File" GridPane.columnIndex="1" GridPane.rowIndex="1" onMouseClicked="#onFileButtonClicked" />
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
